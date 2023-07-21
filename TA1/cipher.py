@@ -17,18 +17,6 @@ def cipher(plaintext, n):
             currentPosition = numbers.find(char)
             # Calculate the character using formula : numbers[(currentPosition + n ) % 10] and add it to cipherText
             cipherText += numbers[(currentPosition + n ) % 10]
-        # Check if 'char' is present in 'lowerLetters' list
-        elif char in lowerLetters:
-            # Get the current position of the 'char' in 'lowerLetters' list
-            currentPosition = lowerLetters.find(char)
-            # Calculate the character using formula : numbers[(currentPosition + n ) % 26] and add it to cipherText
-            cipherText += lowerLetters[(currentPosition + n )% 26] 
-        # Check if 'char' is present in 'capitalLetters' list
-        elif char in capitalLetters:
-            # Get the current position of the 'char' in 'capitalLetters' list
-            currentPosition = capitalLetters.find(char)
-            # Calculate the character using formula : numbers[(currentPosition + n ) % 26] and add it to cipherText
-            cipherText += capitalLetters[(currentPosition + n) % 26] 
         # Else add the 'char' to 'cipherText'
         else:
             cipherText += char
